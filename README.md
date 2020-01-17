@@ -4,8 +4,8 @@ This is fully-featured blog REST API built with Node.js for Firebase projects. I
 API documentation:
 
     // ForumPost routes
-        get  /forumPosts');
-        post    /forumPost');
+        get     /forumPosts
+        post    /forumPost
         get     /forumPost/:forumPostId
         get     /forumPost/:forumPostId/like
         get     /forumPost/:forumPostId/unlike
