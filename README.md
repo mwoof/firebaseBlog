@@ -17,30 +17,29 @@ API documentation:
     POST - flinkPreview - Get a media rich link preview for a link within a block of text.
     POST - faddTopics - Admin feature for bulk adding topics (for suggestions).
     POST - faddImage - Admin feature for bulk adding images.
-    GET- forumPost/:forumPostId - retrieve a specific forum post. This is a public request with no required authentication.
+    GET- forumPost/:forumPostId - retrieve a specific forum post and all it's media, stats and comments. This is a public request with no required authentication.
     GET- forumPost/:forumPostId/like - like a specific forum post. Requires user to be authenticated.
     GET- forumPost/:forumPostId/unlike - unlike a specific forum post. Requires user to be authenticated.
     GET- forumPost/:forumPostId/save - save a specific forum post to a collection. Requires user to be authenticated.
     GET- forumPost/:forumPostId/unsave - remove a specific forum post from a collection. Requires user to be authenticated.
-    POST - forumPost/:forumPostId/edit
-    DELETE - forumPost/:forumPostId/delete
-    POST - forumPost/:forumPostId/comment
-    GET- forumComment/:forumCommentId/like
-    GET- forumComment/:forumCommentId/unlike
-    POST - forumComment/:forumCommentId/edit
-    DELETE - forumComment/:forumCommentId/delete
+    POST - forumPost/:forumPostId/edit - edit a specific forum post. Requires user to be authenticated and either be an admin or original author of post.
+    DELETE - forumPost/:forumPostId/delete - delete a specific forum post. Requires user to be authenticated and either be an admin or original author of post.
+    POST - forumPost/:forumPostId/comment - comment on a specif post. Requires user to be authenticated.
+    GET- forumComment/:forumCommentId/like - like a specific comment on a forum post. Requires user to be authenticated.
+    GET- forumComment/:forumCommentId/unlike -  unlike a specific comment on a forum post. Requires user to be authenticated.
+    POST - forumComment/:forumCommentId/edit - edit a specific comment on a forum post. Requires user to be authenticatedand either be an admin or original author of comment.
+    DELETE - forumComment/:forumCommentId/delete - delete a specific comment on a forum post. Requires user to be authenticatedand either be an admin or original author of comment.
 
     // admin routes
-    POST - indexCollection
+    POST - indexCollection - Index all searchable information int he forum post database (designed specifically for Algolia)
 
     // users routes
-    POST - signup
-    POST - signup/setProfile
-    POST - signup/usernameCheck
-    POST - signup/usernameCheck
-    POST - signin
-    POST - user/plan
-    POST - user/image
+    POST - signup - create a basic account with email and password.
+    POST - signup/setProfile - add profile information (profile picture, username, bio, account type) to existing account.
+    POST - signup/usernameCheck - check if a username is available.
+    POST - signin - sign in to an existing account with username and password or 3rd party authentication (Google, Facebook, Twitter, Microsoft).
+    POST - user/plan - add or change a users plan.
+    POST - user/image - add or change a users profile picture.
     POST - user
     GET-user
     GET-user/:username
