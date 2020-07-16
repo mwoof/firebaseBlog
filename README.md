@@ -12,29 +12,49 @@ npm install --save firebase-admin
 API documentation:
 
     // ForumPost routes
-        get     /forumPosts
-        post    /forumPost
-        get     /forumPost/:forumPostId
-        get     /forumPost/:forumPostId/like
-        get     /forumPost/:forumPostId/unlike
-        get     /forumPost/:forumPostId/save
-        get     /forumPost/:forumPostId/unsave
-        post    /forumPost/:forumPostId/edit
-        delete  /forumPost/:forumPostId/delete
-        post    /forumPost/:forumPostId/comment
-        post    /forumComment/:forumPostId/:forumCommentId/comment
-        get     /forumComment/:forumCommentId/like
-        get     /forumComment/:forumCommentId/unlike
-        post    /forumComment/:forumCommentId/edit
-        delete  /forumComment/:forumCommentId/delete
+    GET- forumPosts
+    POST - forumPosts/:sortMethod
+    POST - fforumPost
+    POST - flinkPreview
+    POST - faddTopics
+    POST - faddImage
+    GET- forumPost/:forumPostId
+    GET- forumPost/:forumPostId/like
+    GET- forumPost/:forumPostId/unlike
+    GET- forumPost/:forumPostId/save
+    GET- forumPost/:forumPostId/unsave
+    POST - forumPost/:forumPostId/edit
+    DELETE - forumPost/:forumPostId/delete
+    POST - forumPost/:forumPostId/comment
+    GET- forumComment/:forumCommentId/like
+    GET- forumComment/:forumCommentId/unlike
+    POST - forumComment/:forumCommentId/edit
+    DELETE - forumComment/:forumCommentId/delete
+
+    // admin routes
+    POST - indexCollection
 
     // users routes
-        post   /signup
-        post   /signin
-        post   /user/image
-        post   /user
-        get    /user
-        get    /user/:username
-        get    /user/:username/follow
-        get    /user/:username/unfollow
-        post   /notifications
+    POST - signup
+    POST - signup/setProfile
+    POST - signup/usernameCheck
+    POST - signup/usernameCheck
+    POST - signin
+    POST - user/plan
+    POST - user/image
+    POST - user
+    GET-user
+    GET-user/:username
+    GET-user/:username/follow
+    GET-user/:username/unfollow
+    POST - notifications
+
+    //bet program routes
+    POST - beta/signup
+    POST - beta/unsubscribe
+
+    //emails routs
+    POST - contactForm/submit
+    POST - mailingList/subscribe
+    POST - mailingList/unsubscribe
+
