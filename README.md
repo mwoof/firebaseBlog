@@ -40,19 +40,19 @@ API documentation:
     POST - signin - sign in to an existing account with username and password or 3rd party authentication (Google, Facebook, Twitter, Microsoft).
     POST - user/plan - add or change a users plan.
     POST - user/image - add or change a users profile picture.
-    POST - user
-    GET-user
-    GET-user/:username
-    GET-user/:username/follow
-    GET-user/:username/unfollow
-    POST - notifications
+    POST - user - edit textual information for a user account (bio, email, interests).
+    GET-user - retrieve all information for an authenticated user (notifications, profile, posts, comments, saves).
+    GET-user/:username - get all publicly available information for a specific user.
+    GET-user/:username/follow - follow a specific user. Requires user to be authenticated.
+    GET-user/:username/unfollow - unfollow a specific user. Requires user to be authenticated.
+    POST - notifications - mark a notification as read.
 
     //bet program routes
-    POST - beta/signup
-    POST - beta/unsubscribe
+    POST - beta/signup - sign up for the beta brogram via email.
+    POST - beta/unsubscribe - unsubscribe from the beta program
 
     //emails routs
-    POST - contactForm/submit
-    POST - mailingList/subscribe
-    POST - mailingList/unsubscribe
+    POST - contactForm/submit - submit a contact form. It will be distributed to the appropriate admins.
+    POST - mailingList/subscribe - subscribe to the mailing list.
+    POST - mailingList/unsubscribe - unsubscribe from the mailing list.
 
